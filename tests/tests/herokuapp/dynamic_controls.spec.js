@@ -1,0 +1,26 @@
+// @ts-check
+const { test, expect } = require('@playwright/test');
+
+test("Dynaminc control - removing and adding checkboxes", async({page}) => {
+    
+  await page.goto('https://the-internet.herokuapp.com/dynamic_controls');
+
+  const checkbox = page.locator('#checkbox');
+  const removeButton = page.locator('#checkbox-example button');
+  const message = page.locator('#message');
+
+  await expect(checkbox).toBeVisible();
+  await expect(message).toBeHidden();
+  await removeButton.click();
+  await expect(checkbox).toBeHidden();
+  await expect(checkbox).not.toBeVisible();
+  await expect(message).toBeVisible();
+  await expect(message).toHaveText("It's gone!")
+  await removeButton.click();
+  await expect(message).toHaveText("It's back!")
+  // console.log(await page.content());
+  //await page.waitForSelector('#checkbox', { state: 'attached', timeout: 10000 });
+  await expect(checkbox).toBeVisible();
+
+}
+);
