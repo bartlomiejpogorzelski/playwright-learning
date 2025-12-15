@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 test("Geolocation - permission with latitude and longitude ", async ({page, context}) => {
 
-  await context.grantPermissions(['geolocation']);
+  await context.grantPermissions(['geolocation'], { origin: 'https://the-internet.herokuapp.com' });
   // mock:
   await context.setGeolocation({
     latitude: 52.2297,
