@@ -10,8 +10,10 @@ test("Geolocation - permission with latitude and longitude ", async ({page, cont
     longitude: 21.0122,
   });
 
-  await page.goto('https://the-internet.herokuapp.com/geolocation');
-
+  await page.goto(
+    'https://the-internet.herokuapp.com/geolocation',
+    { waitUntil: 'domcontentloaded' } // don't wait for images
+  );
   const button = page.locator('#content button');
   const latitude = page.locator('#lat-value');
   const longitude = page.locator('#long-value');
