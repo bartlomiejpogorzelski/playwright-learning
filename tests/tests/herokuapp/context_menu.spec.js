@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Context_menu - right click shows alert ', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/context_menu');
+  await page.goto('/context_menu');
 
   const box = page.locator('#hot-spot');
   

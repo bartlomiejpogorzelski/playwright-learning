@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('A/B test – correct header variant', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/abtest');
+  await page.goto('/abtest');
 
   const title = page.locator('h3');
 

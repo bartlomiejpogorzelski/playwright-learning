@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 test('Broken Images – verify that images load correctly', async ({ page }) => {
 
-  await page.goto('https://the-internet.herokuapp.com/broken_images');
+  await page.goto('/broken_images');
 
   const images = page.locator('img');
 

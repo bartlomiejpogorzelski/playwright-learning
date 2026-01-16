@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Inputs - numbers field', async({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/infinite_scroll');
+  await page.goto('/infinite_scroll');
 
   
   const jscroll = page.locator('.jscroll-added');

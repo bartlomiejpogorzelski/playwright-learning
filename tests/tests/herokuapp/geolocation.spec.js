@@ -11,7 +11,7 @@ test("Geolocation - permission with latitude and longitude ", async ({page, cont
   });
 
   await page.goto(
-    'https://the-internet.herokuapp.com/geolocation',
+    '/geolocation',
     { waitUntil: 'domcontentloaded' } // don't wait for images
   );
   const button = page.locator('#content button');

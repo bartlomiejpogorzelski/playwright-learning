@@ -12,7 +12,7 @@ test('Basic Auth – access protected page', async ({ browser }) => {
 
   const page = await context.newPage();
   
-  await page.goto('https://the-internet.herokuapp.com/basic_auth');
+  await page.goto('/basic_auth');
   await expect(page.locator('p')).toContainText('Congratulatio');
 
 });

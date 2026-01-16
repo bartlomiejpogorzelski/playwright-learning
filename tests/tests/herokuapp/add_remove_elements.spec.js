@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Add or remove elements', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/add_remove_elements/');
+  await page.goto('/add_remove_elements/');
 
   // const addElement = page.locator('.example button');
   // const deleteElement = page.locator('.added-manually');

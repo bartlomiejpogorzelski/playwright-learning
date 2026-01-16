@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Checking checkboxów', async({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/checkboxes');
+  await page.goto('/checkboxes');
 
   const checkbox1 = page.locator('input[type="checkbox"]').nth(0);
   const checkbox2 = page.locator('input[type="checkbox"]').nth(1);

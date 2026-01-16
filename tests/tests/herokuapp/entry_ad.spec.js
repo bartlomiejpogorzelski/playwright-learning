@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Entry ad - modal appears and can be closed', async({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/entry_ad', 
+  await page.goto('/entry_ad', 
     {waitUntil: 'domcontentloaded'}
   );
 

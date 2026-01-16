@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Horizontal slider - set values', async({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/horizontal_slider');
+  await page.goto('/horizontal_slider');
 
   const slider = page.locator('input[type="range"]');
   const value = page.locator('#range');

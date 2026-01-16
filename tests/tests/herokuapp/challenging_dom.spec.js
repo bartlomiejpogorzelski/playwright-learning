@@ -36,7 +36,7 @@ test('Chalenging dom - Table has rows', async ({ page }) => {
 });
 
 test('Chalenging dom - Each row has 7 columns', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/challenging_dom');
+  await page.goto('/challenging_dom');
 
   const rows = page.locator('table tbody tr');
 
@@ -47,7 +47,7 @@ test('Chalenging dom - Each row has 7 columns', async ({ page }) => {
 });
 
 test('Chalenging dom - Each row has action link(edit delete)', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/challenging_dom');
+  await page.goto('/challenging_dom');
 
   const rows = page.locator('table tbody tr');
 

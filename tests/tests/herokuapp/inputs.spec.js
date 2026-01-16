@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Inputs - numbers field', async({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/inputs');
+  await page.goto('/inputs');
 
   
   const input = page.locator('input[type="number"]');

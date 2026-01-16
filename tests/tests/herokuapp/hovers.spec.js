@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 test('Hover – show user data', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/hovers');
+  await page.goto('/hovers');
 
   const firstFigure = page.locator('.figure').nth(0);
   const figureCaption = firstFigure.locator('.figcaption');
